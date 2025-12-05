@@ -1,12 +1,13 @@
-from dog import Dog, CONN, CURSOR
+from lib.dog import Dog
+from lib import CURSOR
 
 class TestDog:
-    '''Class Dog in dog.py'''
-
     def test_has_name_and_breed_attributes(self):
-        '''initializes with name and breed attributes.'''
         dog = Dog(name="joey", breed="cocker spaniel")
-        assert(dog.name == "joey" and dog.breed == "cocker spaniel")
+        assert dog.name == "joey" and dog.breed == "cocker spaniel"
+
+    # Add the rest of your tests here...
+
 
     def test_creates_table(self):
         '''contains method "create_table()" that creates table "dogs" if it does not exist.'''
